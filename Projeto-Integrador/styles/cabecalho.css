@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: radial-gradient(ellipse at center, #17882c 1%, #00510f 100%);
+    color: white;
+    padding: 40px 10%;
+    text-align: center;
+}
+
+header .cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    margin-right: 20px;
+}
+
+header .textoLogo p {
+    margin: 0;
+}
+
+header .textoLogo h1 {
+    margin: 0;
+}
+
+header .menu {
+    display: flex;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: white;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    position: relative; 
+    padding-bottom: 5px; 
+}
+
+header .menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; 
+    background-color: white; 
+    transition: width 0.3s ease;
+}
+
+header .menu a:hover::after {
+    width: 100%; 
+}

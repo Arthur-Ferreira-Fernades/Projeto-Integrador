@@ -1,43 +1,98 @@
 * {
     padding: 0;
     margin: 0;
-}
-
-header {
-    background-image: radial-gradient(ellipse at center,#17882c 1%,#00510f 100%);
-    color: white;
-    padding: 70px;
-    height: 20vh;
-}
-
-header a {
-    text-decoration: none;
-    color: white;
-    margin: 2rem 15rem 0 0;
-    font-size: large;
-}
-
-.cabecalho {
-    height: 1vh;
-}
-
-.textoLogo {
-    margin: 3rem 3rem 0 0;
+    box-sizing: border-box;
 }
 
 .conteudo {
-    height: 75vh;
-    margin: 1rem;
+    margin: 30px auto;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 30px;
+}
+
+.card {
+    width: 18rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 12rem;
+}
+
+.card .card-body {
+    padding: 20px;
+}
+
+.card .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card .card-subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.card .card-text {
+    font-size: 1rem;
+    margin-bottom: 8px;
 }
 
 .formulario {
-    height: 20vh;
+    padding: 2rem;
+    text-align: center;
+    width: 18rem;
+    height: 12rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .formulario label {
-    margin: 0 0 0 1.3rem;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: block;
 }
 
-.btn {
-    margin: 0 0 0 2.5rem;
+.formulario input[type="date"] {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.formulario .btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario .btn:hover {
+    background-color: #218838;
+}
+
+.identificacao {
+    width: 50%;
+    margin: 3rem;
 }
