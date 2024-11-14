@@ -1,3 +1,4 @@
+/* Reset geral para garantir que o padding, margin e box-sizing sejam consistentes */
 * {
     padding: 0;
     margin: 0;
@@ -34,6 +35,7 @@ header .textoLogo h1 {
     margin: 0;
 }
 
+/* Estilo do menu para telas grandes */
 header .menu {
     display: flex;
 }
@@ -43,8 +45,9 @@ header .menu a {
     color: white;
     margin-left: 2rem;
     font-size: 1.2rem;
-    position: relative; 
-    padding-bottom: 5px; 
+    position: relative;
+    padding-bottom: 5px;
+    margin-right: 2rem;
 }
 
 header .menu a::after {
@@ -53,11 +56,85 @@ header .menu a::after {
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px; 
-    background-color: white; 
+    height: 2px;
+    background-color: white;
     transition: width 0.3s ease;
 }
 
 header .menu a:hover::after {
-    width: 100%; 
+    width: 100%;
+}
+
+header .navbar {
+    display: none;
+}
+
+/* Estilo para o menu hamburguer */
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+/* Responsividade para telas menores que 1024px */
+@media (max-width: 1024px) {
+
+    header .cabecalho {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .navbar-toggler {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .menu {
+        display: none; /* Esconde o menu normal em telas menores */
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    header .navbar {
+        display: flex;
+    }
+
+    header .nav-link {
+        color: white;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+}
+
+/* Para telas pequenas (480px e menores) */
+@media (max-width: 480px) {
+    header .textoLogo h1 {
+        font-size: 1.5rem; /* Ajusta o tamanho da logo para telas pequenas */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
 }
